@@ -1,0 +1,12 @@
+*.obj
+*.pdb
+*.exe
+*.dll
+*.lib
+*.ilk
+*.log
+*.sln
+*.vcxproj
+*.vcxproj.filters
+build/
+bin/
