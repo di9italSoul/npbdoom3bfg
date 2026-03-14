@@ -771,11 +771,10 @@ void idWeapon::Clear()
 	}
 
 	memset( &renderEntity, 0, sizeof( renderEntity ) );
-	renderEntity.entityNum	= entityNumber;
-
-	renderEntity.noShadow		= true;
-	renderEntity.noSelfShadow	= true;
-	renderEntity.customSkin		= NULL;
+	renderEntity.entityNum = entityNumber;
+	renderEntity.noShadow = true;
+	renderEntity.noSelfShadow = true;
+	renderEntity.customSkin = NULL;
 
 	// set default shader parms
 	renderEntity.shaderParms[ SHADERPARM_RED ]	= 1.0f;
@@ -980,11 +979,19 @@ void idWeapon::InitWorldModel( const idDeclEntityDef* def )
 
 		// supress model in player views, but allow it in mirrors and remote views
 		renderEntity_t* worldModelRenderEntity = ent->GetRenderEntity();
-		if( worldModelRenderEntity )
+		if (worldModelRenderEntity)
 		{
 			worldModelRenderEntity->suppressSurfaceInViewID = owner->entityNumber + 1;
 			worldModelRenderEntity->suppressShadowInViewID = owner->entityNumber + 1;
-			worldModelRenderEntity->suppressShadowInLightID = LIGHTID_VIEW_MUZZLE_FLASH + owner->entityNumber;
+
+			if (g_weaponShadows.GetBool())
+			{
+				worldModelRenderEntity->suppressShadowInLightID = 0;
+			}
+			else
+			{
+				worldModelRenderEntity->suppressShadowInLightID = LIGHTID_VIEW_MUZZLE_FLASH + owner->entityNumber;
+			}
 		}
 	}
 	else

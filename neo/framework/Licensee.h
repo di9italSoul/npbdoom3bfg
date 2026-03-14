@@ -35,12 +35,12 @@ If you have questions concerning this license or the applicable additional terms
 ===============================================================================
 */
 
-#define GAME_NAME						"DOOM 3: BFG Edition"		// appears on window titles and errors
+#define GAME_NAME						"NPB DOOM 3: BFG Edition"		// appears on window titles and errors
 
 // RB: changed home folder so we don't break the savegame of the original game
 #define SAVE_PATH						"\\id Software\\NPBDOOM 3 BFG"
 
-#define ENGINE_VERSION					"RBDOOM 3 BFG 1.6.0"	// printed in console
+#define ENGINE_VERSION					"NPB DOOM 3 BFG 1.0.0"	// printed in console
 // RB end
 
 // DG begin
@@ -87,10 +87,10 @@ If you have questions concerning this license or the applicable additional terms
 // RB end
 
 // raynorpat: Steam AppID and Steam App Name for figuring out Steam base path
-#define STEAMPATH_APPID					"208200"
-#define STEAMPATH_NAME					"DOOM 3 BFG Edition"
+//#define STEAMPATH_APPID					"208200"
+//#define STEAMPATH_NAME					"DOOM 3 BFG Edition"
 
 // raynorpat: GOG.com Galaxy Launcher Game ID for figuring out Steam base path
-#define GOGPATH_ID						"1733124578"
+//#define GOGPATH_ID						"1733124578"
 
 #define VR_OPTIONS						0

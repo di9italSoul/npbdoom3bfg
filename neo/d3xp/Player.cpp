@@ -9651,7 +9651,7 @@ void idPlayer::Think()
 			}
 		}
 
-		const int weaponLowerDelay = 10000;
+		const int weaponLowerDelay = 30000;
 
 		if (!weaponIdleLowered && (gameLocal.time - weaponIdleTime > weaponLowerDelay))
 		{
