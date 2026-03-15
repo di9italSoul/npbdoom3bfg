@@ -983,15 +983,7 @@ void idWeapon::InitWorldModel( const idDeclEntityDef* def )
 		{
 			worldModelRenderEntity->suppressSurfaceInViewID = owner->entityNumber + 1;
 			worldModelRenderEntity->suppressShadowInViewID = owner->entityNumber + 1;
-
-			if (g_weaponShadows.GetBool())
-			{
-				worldModelRenderEntity->suppressShadowInLightID = 0;
-			}
-			else
-			{
-				worldModelRenderEntity->suppressShadowInLightID = LIGHTID_VIEW_MUZZLE_FLASH + owner->entityNumber;
-			}
+			worldModelRenderEntity->suppressShadowInLightID = LIGHTID_VIEW_MUZZLE_FLASH + owner->entityNumber;
 		}
 	}
 	else
